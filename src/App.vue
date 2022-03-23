@@ -17,10 +17,7 @@
         </td>
         <td>{{ `${card.balance / 1000000}M` }}</td>
         <td>
-          <button
-            v-on:click="deletePlayer(cards, index)"
-            class="button button__delete"
-          >
+          <button v-on:click="deletePlayer(cards, index)" class="button delete">
             <i class="fa fa-close"></i>
           </button>
         </td>
@@ -40,10 +37,7 @@
       class="balance"
     >
       {{ `Player: ${card.name} balance: ${card.balance / 1000000}M` }}
-      <button
-        v-on:click="deletePlayer(cards, index)"
-        class="button button__delete"
-      >
+      <button v-on:click="deletePlayer(cards, index)" class="button delete">
         Delete player
       </button>
     </li>
@@ -63,13 +57,13 @@
     </select>
     <button
       v-on:click="transferM(cards, cardOne, cardTwo, amount)"
-      class="button button__M"
+      class="button M"
     >
       M
     </button>
     <button
       v-on:click="transferK(cards, cardOne, cardTwo, amount)"
-      class="button button__K"
+      class="button K"
     >
       K
     </button>
@@ -122,7 +116,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -138,15 +132,15 @@ export default {
   border-radius: 5px;
   border-width: 3px;
   background: white;
-  &__M {
-    border-color: yellow;
-  }
-  &__K {
-    border-color: blue;
-  }
-  &__delete {
-    border-color: red;
-    color: red;
-  }
+}
+.M {
+  border-color: yellow;
+}
+.K {
+  border-color: blue;
+}
+.delete {
+  border-color: red;
+  color: red;
 }
 </style>

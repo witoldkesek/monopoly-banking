@@ -9,8 +9,6 @@
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
-    "node-sass": "4.12.0",
-    "sass-loader": "10.1.1",
     "vue": "^2.6.11",
     "vue-selector": "0.0.1"
   },
@@ -27,10 +25,7 @@
     "env": {
       "node": true
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
+    "extends": ["plugin:vue/essential", "eslint:recommended"],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
@@ -41,18 +36,7 @@
       "autoprefixer": {}
     }
   },
-  "engines": {
-    "node": "^14.x"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "keywords": [
-    "vue",
-    "vuejs",
-    "starter"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "keywords": ["vue", "vuejs", "starter"],
   "description": "Vue.js example starter project"
 }
