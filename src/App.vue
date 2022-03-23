@@ -1,21 +1,27 @@
 <template>
   <div id="app">
-    <table style="width: 100%; border: 2px">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <table style="width: 100%; text-align: center; border: 2px solid">
       <tr>
-        <td>Color</td>
         <td>Player</td>
         <td>Balance</td>
       </tr>
       <tr v-for="(card, index) in noBankCards(cards)" :key="card.name">
-        <td :style="`background:${card.color}`"></td>
-        <td>{{ card.name }}</td>
+        <td
+          :style="`border-color:${card.color}; border: 2px solid ${card.color}`"
+        >
+          {{ card.name }}
+        </td>
         <td>{{ `${card.balance / 1000000}M` }}</td>
         <td>
           <button
             v-on:click="deletePlayer(cards, index)"
             class="button button__delete"
           >
-            Delete player
+            <i class="fa fa-close"></i>
           </button>
         </td>
       </tr>
@@ -140,6 +146,7 @@ export default {
   }
   &__delete {
     border-color: red;
+    color: red;
   }
 }
 </style>
